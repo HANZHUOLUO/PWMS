@@ -42,8 +42,10 @@ namespace PWMS
                     DataClass.MyMeans.Login_ID = temDR.GetString(0);///用户ID
                     DataClass.MyMeans.My_con.Close();///关闭数据库连接
                     DataClass.MyMeans.My_con.Dispose();///释放空间
-                    DataClass.MyMeans.Login_n = (int)(this.Tag);///登录标识
-                    this.Close();
+                    DataClass.MyMeans.Login_n = int.Parse(this.Tag.ToString());///登录标识
+                    F_Main f_Main = new F_Main();                    
+                    f_Main.Show();
+                    this.Hide();
 
                 }
                 else
@@ -64,13 +66,13 @@ namespace PWMS
         /// <param name="e"></param>
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if ((int)(this.Tag) == 1)
+            if (int.Parse(this.Tag.ToString()) == 1)
             {
                 DataClass.MyMeans.Login_n = 3;
                 Application.Exit();
             }
             else
-                if ((int)(this.Tag) == 2)
+                if (int.Parse(this.Tag.ToString()) == 2)
                 this.Close();
 
         }

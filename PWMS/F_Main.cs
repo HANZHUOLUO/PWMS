@@ -14,9 +14,20 @@ namespace PWMS
 {
     public partial class F_Main : DevExpress.XtraEditors.XtraForm
     {
+        /// <summary>
+        /// 实例化sql公共类
+        /// </summary>
+        DataClass.MyMeans myMeans = new DataClass.MyMeans();
+        /// <summary>
+        /// 实例化变量公共类
+        /// </summary>
+        ModuleClass.MyModule myModule = new ModuleClass.MyModule();
         public F_Main()
         {
             InitializeComponent();
         }
+        #region 通过权限对主窗体进行初始化
+        #endregion
+
     }
 }

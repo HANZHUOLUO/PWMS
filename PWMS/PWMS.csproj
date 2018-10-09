@@ -50,6 +50,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -166,7 +167,25 @@
     <Compile Include="F_Main.Designer.cs">
       <DependentUpon>F_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoAddForm\F_Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAddForm\F_Address.Designer.cs">
+      <DependentUpon>F_Address.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuleClass\MyModule.cs" />
+    <Compile Include="PerForm\F_AddressList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_AddressList.Designer.cs">
+      <DependentUpon>F_AddressList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_ClearData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_ClearData.Designer.cs">
+      <DependentUpon>F_ClearData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F_Login.resx">
@@ -174,6 +193,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Main.resx">
       <DependentUpon>F_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAddForm\F_Address.resx">
+      <DependentUpon>F_Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_AddressList.resx">
+      <DependentUpon>F_AddressList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_ClearData.resx">
+      <DependentUpon>F_ClearData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,10 +232,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InfoAddForm\" />
-    <Folder Include="PerForm\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DataClass\PWMS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

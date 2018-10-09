@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
+using System.Data.Sql;
 
 namespace PWMS.DataClass
 {
@@ -19,6 +21,7 @@ namespace PWMS.DataClass
         //public static string M_str_sqlcon = "server=kingdee;database=db_pwms;Integrated Security=TRUE";///WINDOWS登录
         public static int Login_n = 0;//用户登录与重新登录标识
         public static string AllSql = "Select * from tb_Stuffbasic"; //查询员工基本信息表
+        //string constr=System.Configuration.ConfigurationManager
         #endregion
         #region 建立数据库连接
         /// <summary>

@@ -22,7 +22,7 @@ namespace PWMS
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new F_Main());
+            Application.Run(new F_Login());
         }
     }
 }
