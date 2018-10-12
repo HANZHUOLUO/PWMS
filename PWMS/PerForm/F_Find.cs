@@ -21,7 +21,7 @@ namespace PWMS.PerForm
         DataClass.MyMeans MyMeans = new DataClass.MyMeans();
         public static DataSet My_Ds_grid;
         public string Arsign = " AND ";
-        public static string sUT_sql= " select ID as 编号,StuffName as 职工姓名,Folk as 民族类别,Birthday as 出生日期,Age as 年龄,Kultur as 文化程度,Marriage as 婚姻,Sex as 性别,Visage as 政治面貌,IDCard as 身份证号,Workdate as 单位工作时间,WorkLength as 工龄,Employee as 职工类别,Business as 职务类别,Laborage as 工资类别,Branch as 部门类别,Duthcall as 职称类别,Phone as 电话,Handset as 手机,School as 毕业学校,Speciality as 主修专业,GraduateDate as 毕业时间,M_Pay as 月工资,Bank as 银行帐号,Pact_B as 合同开始时间,Pact_E as 合同结束时间,Pact_Y as 合同年限,BeAware as 籍贯所在省,City as 籍贯所在市 from tb_Stuffbasic "
+        public static string sUT_sql = " select ID as 编号,StuffName as 职工姓名,Folk as 民族类别,Birthday as 出生日期,Age as 年龄,Kultur as 文化程度,Marriage as 婚姻,Sex as 性别,Visage as 政治面貌,IDCard as 身份证号,Workdate as 单位工作时间,WorkLength as 工龄,Employee as 职工类别,Business as 职务类别,Laborage as 工资类别,Branch as 部门类别,Duthcall as 职称类别,Phone as 电话,Handset as 手机,School as 毕业学校,Speciality as 主修专业,GraduateDate as 毕业时间,M_Pay as 月工资,Bank as 银行帐号,Pact_B as 合同开始时间,Pact_E as 合同结束时间,Pact_Y as 合同年限,BeAware as 籍贯所在省,City as 籍贯所在市 from tb_Stuffbasic ";
         private void label1_Click(object sender, EventArgs e)
         {
 
