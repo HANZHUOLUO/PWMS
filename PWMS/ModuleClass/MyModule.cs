@@ -408,5 +408,62 @@ namespace PWMS.ModuleClass
             }
         }
         #endregion
+        #region  向comboBox控件传递数据表中的数据
+        /// <summary>
+        /// 动态向comboBox控件的下拉列表添加数据.
+        /// </summary>
+        /// <param name="cobox">comboBox控件</param>
+        /// <param name="TableName">数据表名称</param>
+        public void CoPassData(ComboBox cobox, string TableName)
+        {
+            cobox.Items.Clear();
+            DataClass.MyMeans MyDataClsaa = new PWMS.DataClass.MyMeans();
+            SqlDataReader MyDR = MyDataClsaa.Getcom("select * from " + TableName);
+            if (MyDR.HasRows)
+            {
+                while (MyDR.Read())
+                {
+                    if (MyDR[1].ToString() != "" && MyDR[1].ToString() != null)
+                        cobox.Items.Add(MyDR[1].ToString());
+                }
+            }
+        }
+        #endregion
+
+        #region  向comboBox控件传递各省市的名称
+        /// <summary>
+        /// 动态向comboBox控件的下拉列表添加省名.
+        /// </summary>
+        /// <param name="cobox">comboBox控件</param>
+        /// <param name="SQLstr">SQL语句</param>
+        /// <param name="n">字段位数</param>
+        public void CityInfo(ComboBox cobox, string SQLstr, int n)
+        {
+            cobox.Items.Clear();
+            DataClass.MyMeans MyDataClsaa = new PWMS.DataClass.MyMeans();
+            SqlDataReader MyDR = MyDataClsaa.Getcom(SQLstr);
+            if (MyDR.HasRows)
+            {
+                while (MyDR.Read())
+                {
+                    if (MyDR[n].ToString() != "" && MyDR[n].ToString() != null)
+                        cobox.Items.Add(MyDR[n].ToString());
+                }
+            }
+        }
+        #endregion
+        #region  设置MaskedTextBox控件的格式
+        /// <summary>
+        /// 将MaskedTextBox控件的格式设为yyyy-mm-dd格式.
+        /// </summary>
+        /// <param name="NDate">日期</param>
+        /// <param name="ID">数据表名称</param>
+        /// <returns>返回String对象</returns>
+        public void MaskedTextBox_Format(MaskedTextBox MTBox)
+        {
+            MTBox.Mask = "0000-00-00";
+            MTBox.ValidatingType = typeof(System.DateTime);
+        }
+        #endregion
     }
 }
